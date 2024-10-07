@@ -23,34 +23,37 @@ End the program.
 ## PROGRAM:
 ```c
 #include <stdio.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-int main() 
-{
-printf("   ***Pseudorandom Number-Generation***\n\n");    
- int count, min, max;
- printf("Enter the number of random numbers to generate: ");
- scanf("%d", &count);
- printf("Enter the minimum value: ");
- scanf("%d", &min);
- printf("Enter the maximum value: ");
- scanf("%d", &max);
- srand(time(NULL));
- printf("Pseudorandom numbers:\n");
- 
- for (int i = 0; i < count; i++) 
- {
- int random_number = (rand() % (max - min + 1)) + min;
- printf("%d\n", random_number);
- }
- return 0;
+//Constants for LCG
+#define A 1664525
+#define C 1013904223
+#define M 4294967296 // 2^32
+
+//Linear Congruential Generator function
+unsigned int lcg(unsigned int seed) {
+    return (A * seed + C) % M;
+}
+
+int main() {
+    unsigned int seed;
+    int n, i;
+    printf("  ***Pseudorandom number generator***\n\n");
+    printf("Enter the seed value: ");
+    scanf("%u", &seed);
+    printf("Enter how many random numbers to generate: ");
+    scanf("%d", &n);
+    printf("Random numbers:\n");
+    for (i = 0; i < n; i++) {
+        seed = lcg(seed);
+        printf("%u\n", seed);
+    }
+    return 0;
 }
 ```
 
 ## Output:
 
-![image](https://github.com/user-attachments/assets/1c33dd6a-dccc-49c6-a6ba-b98c09af0ce2)
+![image](https://github.com/user-attachments/assets/fe5fa813-7a7f-4a0e-9052-70c7814b8fef)
+
 
 ## Result :
 The program for Pseudorandom Number Generation is executed successfully
