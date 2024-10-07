@@ -23,12 +23,11 @@ End the program.
 ## PROGRAM:
 ```c
 #include <stdio.h>
-//Constants for LCG
+
 #define A 1664525
 #define C 1013904223
 #define M 4294967296 // 2^32
 
-//Linear Congruential Generator function
 unsigned int lcg(unsigned int seed) {
     return (A * seed + C) % M;
 }
