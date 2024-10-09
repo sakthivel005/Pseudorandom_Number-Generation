@@ -51,8 +51,8 @@ int main() {
 
 ## Output:
 
-![image](https://github.com/user-attachments/assets/fe5fa813-7a7f-4a0e-9052-70c7814b8fef)
 
+![Screenshot 2024-10-08 203406](https://github.com/user-attachments/assets/c4491f82-9bab-4144-8253-d4cf6995b5c5)
 
 ## Result :
 The program for Pseudorandom Number Generation is executed successfully
