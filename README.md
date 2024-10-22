@@ -1,5 +1,5 @@
 
-# Exp-06-Implementation of Pseudorandom Number Generation using Standard library
+# Ex-06-Implementation of Pseudorandom Number Generation using Standard library
 
 ## AIM:
 To implement Pseudorandom Number Generation using Standard Library.
